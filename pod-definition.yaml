@@ -1,0 +1,14 @@
+pod-definition.yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: nginx-2
+    labels:
+      env: prod
+      owner: Nadim
+  spec:
+    containers:
+      - name: nginx
+        image: nginx
+      - name: busybox
+        image: busybox
