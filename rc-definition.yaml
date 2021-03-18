@@ -1,0 +1,23 @@
+rc-definition.yaml
+  apiVersion: v1
+  kind: ReplicationController
+  metadata:
+    name: myApp-rc
+    labels:
+      env: prod
+      owner: Nadim
+      type: frontend
+  spec:
+    template:
+      metadata:
+        name: nginx-2
+        labels:
+          env: prod
+          owner: Nadim
+      spec:
+        containers:
+          - name: nginx
+            image: nginx
+          - name: busyboxs
+            image: busybox
+    replicas: 3
