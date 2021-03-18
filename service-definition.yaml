@@ -1,0 +1,18 @@
+service-definition.yaml
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: myApp-service
+    labels:
+      env: prod
+      owner: Nadim
+      type: frontend
+  spec:
+    type: NodePort
+    ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
+    selector:
+      app: myapp
+      type: front-end           #pull label from pod-definition file
