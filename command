@@ -4,7 +4,7 @@ Details of POD #kubectl describe pod <pod-name>
                #kubectl get pods -o wide
 create pod using definition file #kubectl create -f pod-definition.yaml
 create replication controller # kubectl crreate -f rc-definition.yaml
-create replica Set # kubectl crreate -f replicaSet-definition.yaml
+create replica Set # kubectl create -f replicaSet-definition.yaml
 create Deployment # kubectl create -f deployment-definition.yaml
                   # kubectl set image <definition-file-name> nginx1.9.0=nginx1.9.1
 get list of replication controller # kubectl get replicationcontroller
@@ -23,5 +23,5 @@ To create service # kubectl create -f service-definition.yaml
 To get the list # kubectl get svc
 
 Update no of replicas in replicaset # kubectl replace -f <definition-file>
-                                    # kubectl scale --replicas=6 <definition_file>
+                                    # kubectl scale --replicas=6 deployment/<deployment-name>
                                     # kubectl scale --replicas=6 replicaset <name-of-rc>

@@ -53,3 +53,6 @@ nodeGroups:
       instance-type: spot
     ssh: 
       publicKeyName: new-key
+cloudWatch:
+  clusterLogging:
+    enableTypes: ["api", "audit", "authenticator"]
