@@ -8,7 +8,7 @@ metadata:
 nodeGroups:
   - name: sample-ng-1
     instanceType: t2.small
-    desiredCapacity: 4
+    desiredCapacity: 2
     ssh: # use existing EC2 key
       publicKeyName: new-key
   - name: sample-ng-2
