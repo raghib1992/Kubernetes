@@ -2,7 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test-autoscaler
+  labels:
+    type: app
 spec:
+  selector:
+    matchLabels:
+      app: nginx
   replicas: 1
   template:
     metadata:
@@ -20,6 +25,5 @@ spec:
           requests:
             cpu: 300m
             memory: 512Mi
-    selector:
-      matchLabels:
+      nodeSelector:
         instance-type: spot
