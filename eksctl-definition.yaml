@@ -11,3 +11,13 @@ nodeGroups:
     desiredCapacity: 4
     ssh: # use existing EC2 key
       publicKeyName: new-key
+  - name: ng-mixed
+    minSize: 3
+    maxSize: 5
+    instancesDistribution:
+      maxPrice: 0.2
+      instanceTypes: ["t2.small", "t3.small"]
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 50
+    ssh: 
+      publicKeyName: new-key
