@@ -20,6 +20,6 @@ spec:
           requests:
             cpu: 300m
             memory: 512Mi
-      selector:
-        matchLabels:
-          instance-type: spot
+    selector:
+      matchLabels:
+        instance-type: spot
