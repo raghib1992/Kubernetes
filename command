@@ -11,6 +11,12 @@ get list of replication controller # kubectl get replicationcontroller
 get list of replicaSet # kubectl get replicasets
 get list of deployment # kubectl get deployments
 
+
+# Install helm
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+# Adding official stable helm repo
+helm repo add stable https://charts.helm.sh/stable/
 check status of rollout # kubectl rollout status deployment /<deployment-name>
 TO undo change and upgrade # kubectl rollout undo deployment/<deployment-name>
                            # kubectl rollout history <deloyment-name>
