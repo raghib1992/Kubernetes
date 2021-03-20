@@ -60,3 +60,17 @@ eksctl delete cluster -f <eks-cluster-definition-file>
 
 # command for cluster auto scaler
 
+# Command to install helm
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+# command to add official stable repo
+helm repo add stable https://charts.helm.sh/stable
+# command to check helm repo
+helm repo list
+# command to update repo
+helm repo update
+# command to rearch what reo have
+helm search repo
+# command to install pod
+helm install <pod-name> stable/<app-name>
+# command to uninstall pods
+helm uninstall <pod-name>
